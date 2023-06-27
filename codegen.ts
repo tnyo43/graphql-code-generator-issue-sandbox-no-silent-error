@@ -1,7 +1,8 @@
 import { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
-  noSilentErrors: true,
+  /** If you remove `noSilentErrors` option, you will see the command `npm codegen` fails silently */
+  // noSilentErrors: true,
   schema: 'schema.graphql',
   documents: ['document.graphql', 'src/*.ts'],
   generates: {
