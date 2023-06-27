@@ -1,7 +1,0 @@
-query user {
-    user(id: 1) {
-        id
-        username
-        email
-    }
-}
