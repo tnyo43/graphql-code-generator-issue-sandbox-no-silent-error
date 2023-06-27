@@ -2,8 +2,23 @@ type Query {
     user(id: ID!): User!
 }
 
+type Mutation {
+    validUpdateUser(input: UpdateUserInput!): UpdateUserPayload!
+    invalidUpdateUser(input: UpdateUserInput!): UpdateUserPayload!
+}
+
 type User {
     id: ID!
     username: String!
     email: String!
+}
+
+input UpdateUserInput {
+    id: ID!
+    username: String
+    email: String
+}
+
+type UpdateUserPayload {
+    user: User!
 }
